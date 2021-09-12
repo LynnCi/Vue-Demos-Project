@@ -3,12 +3,25 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import Vuex from 'vuex'
 
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
+Vue.use(Vuex)
+const store = new Vuex.Store({
+  state:{
+    count:0
+  },
+  mutations:{
+    countIncrease(state,v){
+      state.count =  v
+    }
+  }
+})
+
 new Vue({
   el: '#app',
+  store,
   router,
   components: { App },
   template: '<App/>'

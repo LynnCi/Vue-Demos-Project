@@ -1,12 +1,17 @@
 <template>
   <div id="app">
+    <basic-demo></basic-demo>
     <router-view/>
   </div>
 </template>
 
 <script>
+import basicDemo from './components/basicDemo.vue'
 export default {
-  name: 'App'
+  name: 'App',
+  components:{
+    basicDemo
+  }
 }
 </script>
 
