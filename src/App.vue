@@ -1,16 +1,19 @@
 <template>
   <div id="app">
-    <basic-demo></basic-demo>
+    <!-- <basic-demo></basic-demo> -->
+    <HelloWorld></HelloWorld>
     <router-view/>
   </div>
 </template>
 
 <script>
 import basicDemo from './components/basicDemo.vue'
+import HelloWorld from './components/HelloWorld.vue'
 export default {
   name: 'App',
   components:{
-    basicDemo
+    basicDemo,
+    HelloWorld
   }
 }
 </script>
