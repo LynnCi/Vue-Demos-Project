@@ -3,12 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import Vuex from 'vuex'
-import store from './store'
+// import Vuex from 'vuex'
+// import store from './store'
 
 Vue.config.productionTip = false
 
-Vue.use(Vuex)
+// Vue.use(Vuex)
 // const store = new Vuex.Store({
 //   state:{
 //     count:0
@@ -21,20 +21,20 @@ Vue.use(Vuex)
 // })
 
 //全局导航守卫
-router.beforeEach((to,from,next) => {
-  console.log(store.state,'store.state')
-  if(store.state.userInfo || to.path === "/login"){
-    next()
-  }else{
-    next({
-      path:'/login'
-    })
-  }
-})
+// router.beforeEach((to,from,next) => {
+//   console.log(store.state,'store.state')
+//   if(store.state.userInfo || to.path === "/login"){
+//     next()
+//   }else{
+//     next({
+//       path:'/login'
+//     })
+//   }
+// })
 
 new Vue({
   el: '#app',
-  store,
+  // store,
   router,
   components: { App },
   template: '<App/>'
